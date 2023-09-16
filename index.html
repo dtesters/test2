@@ -24,7 +24,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             color: white;
-            animation: cardColorChange 4s infinite alternate;
+            animation: cardColorChange 10s infinite;
         }
 
         .title {
@@ -58,11 +58,20 @@
             0% {
                 background: linear-gradient(45deg, #1dc14d, #1d81c1);
             }
-            50% {
+            20% {
                 background: linear-gradient(45deg, #1d81c1, #1dc14d);
             }
+            40% {
+                background: linear-gradient(45deg, #c11d77, #1d81c1);
+            }
+            60% {
+                background: linear-gradient(45deg, #1d81c1, #c11d77);
+            }
+            80% {
+                background: linear-gradient(45deg, #c1a11d, #c11d77);
+            }
             100% {
-                background: linear-gradient(45deg, #1dc14d, #1d81c1);
+                background: linear-gradient(45deg, #c11d77, #c1a11d);
             }
         }
 
