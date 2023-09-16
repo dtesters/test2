@@ -3,8 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Your Website</title>
+    <style>
+        /* CSS code goes here */
+        body {
+            background-color: #333; /* Dark mode background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .card {
+            background: linear-gradient(45deg, #1dc14d, #1d81c1); /* Animated card background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: white;
+            animation: cardColorChange 4s infinite alternate;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+
+        .description {
+            font-size: 18px;
+        }
+
+        .button {
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: buttonColorChange 2s infinite alternate;
+        }
+
+        .button:hover {
+            animation: none; /* Disable animation on hover */
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes cardColorChange {
+            0% {
+                background: linear-gradient(45deg, #1dc14d, #1d81c1);
+            }
+            50% {
+                background: linear-gradient(45deg, #1d81c1, #1dc14d);
+            }
+            100% {
+                background: linear-gradient(45deg, #1dc14d, #1d81c1);
+            }
+        }
+
+        @keyframes buttonColorChange {
+            0% {
+                background-color: rgb(255, 0, 0); /* Red */
+            }
+            25% {
+                background-color: rgb(0, 255, 0); /* Green */
+            }
+            50% {
+                background-color: rgb(0, 0, 255); /* Blue */
+            }
+            75% {
+                background-color: rgb(255, 255, 0); /* Yellow */
+            }
+            100% {
+                background-color: rgb(255, 0, 255); /* Magenta */
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,7 +93,7 @@
             <p class="description">Description with <span id="color-change">RGB</span> animated colors.</p>
             <div class="buttons">
                 <div class="button-row">
-                    <button class="button" onclick="openSite('https://discord.com/users/591534252307513347')">My Discord profile</button>
+                    <button class="button" onclick="openSite('URL1')">Button 1</button>
                     <button class="button" onclick="openSite('URL2')">Button 2</button>
                     <button class="button" onclick="openSite('URL3')">Button 3</button>
                 </div>
@@ -25,6 +105,10 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function openSite(url) {
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
 </html>
