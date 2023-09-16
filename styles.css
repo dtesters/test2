@@ -1,0 +1,56 @@
+body {
+    background-color: #333; /* Dark mode background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    background-color: #444; /* Animated card background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    animation: cardColorChange 4s infinite alternate;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.button {
+    background-color: #555; /* Animated button background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #666; /* Hover color */
+}
+
+@keyframes cardColorChange {
+    0% {
+        background-color: #444;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #444;
+    }
+}
