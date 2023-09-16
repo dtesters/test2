@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     background-color: #333; /* Dark mode background */
     display: flex;
@@ -12,7 +14,7 @@ body {
 }
 
 .card {
-    background-color: #444; /* Animated card background color */
+    background: linear-gradient(45deg, #1dc14d, #1d81c1); /* Animated card background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -29,28 +31,50 @@ body {
 }
 
 .button {
-    background-color: #555; /* Animated button background color */
     color: white;
     padding: 10px 20px;
     border: none;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    animation: buttonColorChange 2s infinite alternate;
 }
 
 .button:hover {
-    background-color: #666; /* Hover color */
+    animation: none; /* Disable animation on hover */
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes cardColorChange {
     0% {
-        background-color: #444;
+        background: linear-gradient(45deg, #1dc14d, #1d81c1);
     }
     50% {
-        background-color: #555;
+        background: linear-gradient(45deg, #1d81c1, #1dc14d);
     }
     100% {
-        background-color: #444;
+        background: linear-gradient(45deg, #1dc14d, #1d81c1);
+    }
+}
+
+@keyframes buttonColorChange {
+    0% {
+        background-color: rgb(255, 0, 0); /* Red */
+    }
+    25% {
+        background-color: rgb(0, 255, 0); /* Green */
+    }
+    50% {
+        background-color: rgb(0, 0, 255); /* Blue */
+    }
+    75% {
+        background-color: rgb(255, 255, 0); /* Yellow */
+    }
+    100% {
+        background-color: rgb(255, 0, 255); /* Magenta */
     }
 }
